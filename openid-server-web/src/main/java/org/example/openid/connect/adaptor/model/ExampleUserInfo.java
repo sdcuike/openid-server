@@ -323,5 +323,11 @@ public class ExampleUserInfo implements UserInfo {
 		return obj;
     }
 
+	@Override
+	public JsonObject getSource() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }
