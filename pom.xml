@@ -15,6 +15,7 @@
 		<spring.security.version>3.2.7.RELEASE</spring.security.version>
 		<mitreid-version>1.2.0</mitreid-version>
 		<postgresql-version>9.4-1202-jdbc42 </postgresql-version>
+		<javax.servlet.version>9.2.2.v20140723</javax.servlet.version>
 	</properties>
 
 	<modules>
@@ -42,6 +43,12 @@
 			<artifactId>postgresql</artifactId>
 			<version>${postgresql-version}</version>
 		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -55,8 +62,16 @@
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<webApp>
 						<contextPath>/</contextPath>
+
 					</webApp>
+
+					<webAppConfig>
+
+						<allowDuplicateFragmentNames>true</allowDuplicateFragmentNames>
+
+					</webAppConfig>
 				</configuration>
+
 			</plugin>
 		</plugins>
 	</build>
